@@ -1,0 +1,40 @@
+.loader {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  color: var(--color-teal-700);
+}
+
+.loader__full {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40vh;
+}
+
+.loader__pulse {
+  width: 72px;
+  height: 24px;
+  stroke: var(--color-coral);
+  stroke-width: 3;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.loader__pulse polyline {
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  animation: pulse-draw 1.2s ease-in-out infinite;
+}
+
+.loader__label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+}
+
+@keyframes pulse-draw {
+  0% { stroke-dashoffset: 200; }
+  60% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: -200; }
+}

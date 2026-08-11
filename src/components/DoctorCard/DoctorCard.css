@@ -1,0 +1,99 @@
+.doctor-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.doctor-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.doctor-card__photo {
+  background: linear-gradient(135deg, var(--color-teal-700), var(--color-teal-900));
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.doctor-card__photo span {
+  font-family: var(--font-display);
+  font-size: var(--fs-2xl);
+  color: var(--color-white);
+  opacity: 0.9;
+}
+
+.doctor-card__body {
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  flex: 1;
+}
+
+.doctor-card__department {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-coral-dark);
+}
+
+.doctor-card__name {
+  font-size: var(--fs-md);
+  margin: 0;
+}
+
+.doctor-card__qualification {
+  font-size: var(--fs-sm);
+  margin: 0;
+}
+
+.doctor-card__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--fs-sm);
+  color: var(--color-muted);
+  margin: var(--space-2) 0;
+}
+
+.doctor-card__rating {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  color: var(--color-gold);
+  font-weight: 600;
+}
+
+.doctor-card__rating svg {
+  width: 14px;
+  height: 14px;
+  fill: var(--color-gold);
+}
+
+.doctor-card__days {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-4);
+}
+
+.doctor-card__day {
+  font-size: var(--fs-xs);
+  background: var(--color-mint-100);
+  color: var(--color-teal-700);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+}
+
+.doctor-card__cta {
+  margin-top: auto;
+  width: 100%;
+}

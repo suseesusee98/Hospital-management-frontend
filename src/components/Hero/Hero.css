@@ -1,0 +1,112 @@
+.hero {
+  padding: var(--space-8) 0 var(--space-9);
+  background: linear-gradient(180deg, var(--color-mint-50) 0%, var(--color-paper) 70%);
+}
+
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+.eyebrow__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-coral);
+  animation: dot-pulse 1.6s ease-in-out infinite;
+}
+
+.hero__copy h1 {
+  font-size: var(--fs-3xl);
+  letter-spacing: -0.01em;
+}
+
+.hero__copy h1 em {
+  font-style: italic;
+  color: var(--color-coral-dark);
+}
+
+.hero__lede {
+  font-size: var(--fs-md);
+  max-width: 46ch;
+  margin-bottom: var(--space-6);
+}
+
+.hero__actions {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.hero__graphic {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__pulse-art {
+  width: 100%;
+  max-width: 420px;
+}
+
+.hero__ring {
+  fill: var(--color-mint-100);
+  stroke: var(--color-line);
+  stroke-width: 1;
+}
+
+.hero__line {
+  fill: none;
+  stroke: var(--color-coral);
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 900;
+  stroke-dashoffset: 900;
+  animation: draw-line 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hero__stat-card {
+  position: absolute;
+  bottom: 8%;
+  left: 2%;
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: var(--space-4) var(--space-5);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+}
+
+.hero__stat-value {
+  font-family: var(--font-display);
+  font-size: var(--fs-xl);
+  font-weight: 600;
+  color: var(--color-teal-900);
+}
+
+.hero__stat-label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--color-muted);
+}
+
+@keyframes draw-line {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes dot-pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.6); opacity: 0.5; }
+}
+
+@media (max-width: 900px) {
+  .hero__inner {
+    grid-template-columns: 1fr;
+  }
+  .hero__copy h1 { font-size: var(--fs-2xl); }
+  .hero__graphic { order: -1; }
+}

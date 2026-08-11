@@ -1,0 +1,70 @@
+/**
+ * Design tokens — Pulse & Wren Hospital
+ * A clinical-but-human palette: deep teal for trust and precision,
+ * a warm coral for the human, cared-for moments (CTAs, the pulse line).
+ */
+:root {
+  /* Color */
+  --color-ink: #0B2120;
+  --color-teal-900: #0E3D3E;
+  --color-teal-700: #145C5D;
+  --color-teal-500: #1B7A7B;
+  --color-mint-100: #E7F3EF;
+  --color-mint-50: #F4FAF8;
+  --color-paper: #FBFAF7;
+  --color-coral: #FF6F5E;
+  --color-coral-dark: #E85949;
+  --color-gold: #E8A33D;
+  --color-line: #DCE7E4;
+  --color-white: #FFFFFF;
+  --color-muted: #5B7472;
+
+  /* Type */
+  --font-display: 'Fraunces', 'Georgia', serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-md: 1.125rem;
+  --fs-lg: 1.375rem;
+  --fs-xl: 1.875rem;
+  --fs-2xl: 2.5rem;
+  --fs-3xl: 3.5rem;
+
+  /* Spacing (8px scale) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+
+  /* Shape */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+
+  /* Shadow */
+  --shadow-sm: 0 2px 8px rgba(14, 61, 62, 0.06);
+  --shadow-md: 0 8px 24px rgba(14, 61, 62, 0.10);
+  --shadow-lg: 0 20px 48px rgba(14, 61, 62, 0.16);
+
+  /* Layout */
+  --container-max: 1200px;
+  --transition: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

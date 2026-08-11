@@ -1,0 +1,42 @@
+.not-found {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+.not-found__inner {
+  text-align: center;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.not-found__pulse {
+  width: 160px;
+  height: 48px;
+  margin: 0 auto var(--space-5);
+  stroke: var(--color-coral);
+  stroke-width: 3;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.not-found h1 {
+  font-size: var(--fs-xl);
+}
+
+.not-found__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-5);
+  margin-top: var(--space-5);
+  flex-wrap: wrap;
+}
+
+.not-found__link {
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--color-teal-700);
+  text-decoration: underline;
+}
